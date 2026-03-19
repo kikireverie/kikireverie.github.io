@@ -17,5 +17,26 @@
 <body>
   <h1>𝜗ৎ HII WELCOME 𝜗ৎ</h1>
   <p>Welcome to my website omg have fun!</p>
+  </div>
+
+      <div className="grid md:grid-cols-3 gap-6">
+        {["Blog", "Gallery", "About Me"].map((section, i) => (
+          <motion.div
+            key={i}
+            whileHover={{ scale: 1.05 }}
+            className="rounded-2xl"
+          >
+            <Card className="shadow-lg rounded-2xl bg-white">
+              <CardContent className="p-6">
+                <h2 className="text-xl font-semibold mb-2">{section}</h2>
+                <p className="text-sm mb-4">
+                  A little cozy space for {section.toLowerCase()} content.
+                </p>
+                <Button className="rounded-xl">Explore</Button>
+              </CardContent>
+            </Card>
+          </motion.div>
+        ))}
+      </div>
 </body>
 </html>
